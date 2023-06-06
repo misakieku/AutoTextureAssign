@@ -164,7 +164,7 @@ public class AutoTextureAssign : EditorWindow
             if (!m.HasTexture(data.propertyName))
                 continue;
 
-            var texture = FindTexture(m.name, data.textureName);
+            var texture = SearchTexture(m.name, data.textureName);
 
             if (texture == null)
                 continue;
@@ -173,7 +173,7 @@ public class AutoTextureAssign : EditorWindow
         }
     }
 
-    private Texture FindTexture(string materialName, string name)
+    private Texture SearchTexture(string materialName, string name)
     {
         string[] pathArray = new string[1];
         pathArray.SetValue(findingDirectory, 0);
