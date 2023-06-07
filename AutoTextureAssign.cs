@@ -204,6 +204,7 @@ public class AutoTextureAssign : EditorWindow
     {
         AssetDatabase.SaveAssets();
         GC.Collect();
+        EditorUtility.UnloadUnusedAssetsImmediate();
         AssetDatabase.Refresh();
     }
 }
